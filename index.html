@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(background\ photo.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            background-color: grey;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+
+
+        #navbar {
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: 0px;
+        }
+
+
+        #logo img {
+            /* border: 2px solid blue; */
+            margin: 2px;
+            padding: 2px;
+            height: 50px;
+        }
+
+        .item a {
+            text-decoration: none;
+            display: block;
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar ul li {
+            color: white;
+            list-style: none;
+            font-size: 1.3rem;
+
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+            text-decoration: underline;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+
+        .h-primary {
+            font-size: 2.8rem;
+            padding: 12px;
+            text-align: center;
+        }
+
+
+        #home h1 {
+            color: white;
+            text-align: center;
+            font-size: 3.8rem;
+            font-family: 'Caveat', cursive;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            /* margin: 17px; */
+            margin: 0 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size:20px;
+
+        }
+
+        .btn:hover {
+            color: rgb(78, 30, 30);
+            background-color: rgb(85, 77, 77);
+        }
+
+        #services {
+            border: 2px solid blue;
+            margin: 34px;
+            display: flex;
+            /* display: list-item; */
+            /* height:23px; */
+            /* width:35px; */
+
+        }
+
+        .box {
+            border: 2px solid brown;
+            margin: 3px 6px;
+            height: 45vh;
+            width: 23vw;
+            border-radius: 28px;
+            padding: 34px;
+            justify-content: center;
+            background-color: rgb(211, 206, 206);
+        }
+
+        .box img {
+            margin: 0px;
+            padding: 0px 60px;
+            height: 150px;
+            width: 220px;
+            /* height:156px; */
+            display: block;
+            margin: auto;
+        }
+
+        .btn-container a {
+            text-decoration: underline;
+            color: white;
+        }
+
+        #home p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .product img {
+            padding: 74px;
+            /* width: 100%;
+            height: auto;
+            margin-bottom: 10px; */
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            /* border-radius: 50%; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .product p {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+
+        button {
+            left: 45px;
+            padding: 10px;
+            margin: 10px;
+            background-color: greenyellow;
+            width: 302px;
+        }
+        .explore{
+            text-align: center;
+            font-size: 2em;
+        }
+        header {
+            /* background-color: #2c3e50; */
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service {
+            width: 30%;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-sizing: border-box;
+            transition: transform 0.3s ease-in-out;
+            color: black;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        
+        
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.jpg" alt="MyMeal" class="src">
+        </div>
+        <ul>
+            <li class="item"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li class="item"><a href="services.html">Services</a></li>
+            <li class="item"><a href="about.html">About Us</a></li>
+            <li class="item"><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+            <li class="item"><a href="login.html"><i class="fa-solid fa-circle-user"></i> Login</a></li>
+            <li class="item"><a href="feedback.html"><i class="fa-solid fa-envelope"></i> Send Feedback</a></li>
+            <input type="text" placeholder="Search....">
+            
+        </ul>
+    </nav>
+    <!-- <section class="textarea">
+    <textarea name="Search" id="" cols="150" rows="1" placeholder="Search"></textarea>
+    </section> -->
+    <section id="home">
+        <h1 class="h-primary"><i class="fa-solid fa-truck-fast"></i> Welcome to TastyTrails Delivery</h1>
+        <p>Welcome to TastyTrails Delivery - your gateway to culinary delights at your doorstep! With a diverse
+            selection of cuisines from local eateries, we ensure every dish is made with fresh ingredients and delivered
+            with care. Order easily, indulge freely, and let TastyTrails Delivery satisfy your cravings hassle-free.
+            Join us on a culinary journey today!</p>
+        <div class="btn-container">
+            <button class="btn"><a href="item.html"><i class="fa-solid fa-cart-shopping"></i> Order Now</a></button>
+            <button class="btn"><a href="login.html"><i class="fa-solid fa-circle-user"></i> Login</a></button>
+        </div>
+
+
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="explore">Explore</p>
+    <p class="explore">What's on your mind?</p>
+
+    <div class="container">
+        <div class="product">
+            <img src="chicken curry.jfif" alt="Product 1">
+            <h2>Chicken curry</h2>
+            <p>Tender chicken cooked in a masala gravy with onions, tomatoes and special spices.</p>
+            <p>Price: $X.XX</p>
+            <p>30% OFF</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="ChickenBiryani.jpg" alt="Product 2">
+            <h2>Chicken Biryani</h2>
+            <p>Indulge in the aromatic flavors of our Chicken Biryani, a classic Indian rice dish cooked with tender
+                chicken pieces, fragrant basmati rice, and a blend of spices.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="chilli chicken.jfif" alt="Product 2">
+            <h2>Chilli chicken</h2>
+            <p>Our Chicken Chilli is a delightful fusion of tender chicken chunks stir-fried with vibrant bell peppers,
+                onions, and a zesty chili sauce. Perfectly balanced flavors with a hint of spice make it an irresistible
+                choice for those craving a flavorful and satisfying meal.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="cold coffee.jpg" alt="Product 2">
+            <h2>Cold coffee</h2>
+            <p>Our Cold Coffee is the ultimate blend of rich, creamy goodness and invigorating caffeine. Made with
+                premium coffee, chilled to perfection, and topped with a velvety layer of whipped cream, it's a
+                delightful treat for any time of day.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="burger.jpg" alt="Product 2">
+            <h2>Burger</h2>
+            <p>Sink your teeth into our mouthwatering Burger, featuring a juicy beef patty or a flavorful veggie patty,
+                topped with fresh lettuce, ripe tomatoes, crunchy pickles, and creamy sauce, all nestled within a soft,
+                toasted bun.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="cookies.jfif" alt="Product 2">
+            <h2>Cookies</h2>
+            <p>Treat yourself to our freshly baked Cookies, golden-brown and loaded with chocolate chips or your
+                favorite mix-ins. Each bite is a perfect balance of chewy and crispy, delivering a burst of sweetness
+                with every nibble.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="dal.jfif" alt="Product 2">
+            <h2>Dal</h2>
+            <p>Our Dal is a comforting staple of Indian cuisine, made from lentils simmered to perfection with aromatic
+                spices like cumin, turmeric, and garlic. It's a hearty and wholesome dish that pairs perfectly with rice
+                or bread for a satisfying meal.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="desserts.jpg" alt="Product 2">
+            <h2>Desserts</h2>
+            <p>Treat yourself to our decadent Desserts, a delightful array of sweet creations guaranteed to satisfy your
+                cravings. From creamy cheesecakes to indulgent chocolate treats, there's something for every dessert
+                lover to enjoy.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="fish.jpg" alt="Product 2">
+            <h2>Fish</h2>
+            <p>Savor the flavors of the sea with our tender and flaky Fish, expertly seasoned and grilled to perfection.
+                Whether you prefer salmon, cod, or another variety, each bite is a fresh and flavorful taste of the
+                ocean.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="fried rice.jfif" alt="Product 2">
+            <h2>Fried Rice</h2>
+            <p>Dive into a bowl of our tantalizing Fried Rice, a flavorful medley of fluffy rice, crisp vegetables, and
+                your choice of protein, stir-fried to perfection with soy sauce and fragrant spices. It's a classic dish
+                that never fails to satisfy your cravings for something savory and delicious.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="fries.jfif" alt="Product 2">
+            <h2>Fries</h2>
+            <p>Crispy on the outside, fluffy on the inside- our Fries are the perfect sidekick to any meal. Hand-cut
+                from premium potatoes and fried to a golden perfection, they're irresistibly delicious on their own or
+                dipped in your favorite sauces.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="fruit custard.jpg" alt="Product 2">
+            <h2>Fruit custard</h2>
+            <p>Enjoy a refreshing blend of creamy custard infused with a medley of fresh seasonal fruits. Our Fruit
+                Custard is a delightful dessert that combines the richness of custard with the natural sweetness of
+                fruits for a satisfyingly sweet treat.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="halwa.jfif" alt="Product 2">
+            <h2>Halwa</h2>
+            <p>Indulge in the rich and aromatic flavors of our Halwa, a traditional sweet dish made from semolina, ghee,
+                sugar, and flavored with nuts and aromatic spices. Each spoonful is a burst of sweetness that will warm
+                your heart.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="kebabs.jfif" alt="Product 2">
+            <h2>Kebabs</h2>
+            <p>Delight your taste buds with our succulent Kebabs, featuring tender marinated meat or vegetables grilled
+                to perfection. Served with a side of tangy chutney, these flavorful skewers are a perfect appetizer or
+                main course option.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="khichdi.jfif" alt="Product 2">
+            <h2>Khichdi</h2>
+            <p>Experience comfort food at its finest with our Khichdi, a wholesome dish made from rice, lentils, and
+                aromatic spices. Whether enjoyed on its own or paired with yogurt or pickles, our Khichdi is sure to
+                satisfy your cravings.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="kofta.jfif" alt="Product 2">
+            <h2>Kofta</h2>
+            <p>Treat yourself to our savory Kofta, featuring tender balls made from minced meat or vegetables simmered
+                in a rich and flavorful sauce. Each bite is a burst of deliciousness that will leave you craving more.
+            </p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="lassi.webp" alt="Product 2">
+            <h2>Lassi</h2>
+            <p>Quench your thirst with our refreshing Lassi, a traditional Indian yogurt-based drink blended with water
+                or milk and flavored with sugar and spices. Creamy, frothy, and utterly delicious, our Lassi is the
+                perfect way to cool down on a hot day.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="milk shake.jfif" alt="Product 2">
+            <h2>Milk Shake</h2>
+            <p>Indulge in our creamy and decadent Milkshake, made with rich, creamy milk blended with your choice of
+                fresh fruits or flavored syrups. Whether you prefer classic flavors like chocolate or strawberry or
+                adventurous combinations, our Milkshakes are sure to satisfy your sweet tooth.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="mocktail.jpg" alt="Product 2">
+            <h2>Mocktail</h2>
+            <p>Refresh your senses with our Mocktail, a non-alcoholic drink bursting with fruity flavors and creative
+                combinations. From tropical punches to zesty citrus blends, our Mocktails are perfect for those seeking
+                a refreshing and alcohol-free beverage option.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="momos.jfif" alt="Product 2">
+            <h2>Momos</h2>
+            <p>Delight in our savory Momos, featuring delicate dumplings filled with your choice of meat or vegetables,
+                steamed or fried to perfection. Served with a side of spicy dipping sauce, our Momos are a popular and
+                satisfying snack or meal option.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="mushrooms.jfif" alt="Product 2">
+            <h2>Mushrooms</h2>
+            <p> Enjoy the earthy flavors of our Mushrooms, cooked to perfection in a variety of savory dishes. Whether
+                sautéed, grilled, or stir-fried, our Mushrooms are a versatile and delicious addition to any meal.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="mutton kasha.jfif" alt="Product 2">
+            <h2>Mutton kasha</h2>
+            <p>Experience the rich and aromatic flavors of our Mutton Kasha, a traditional Indian dish featuring tender
+                mutton cooked in a spicy and flavorful gravy. Served with rice or bread, our Mutton Kasha is sure to
+                tantalize your taste buds.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="noodles.jfif" alt="Product 2">
+            <h2>Noodles</h2>
+            <p>Savor the taste of our delicious Noodles, stir-fried to perfection with fresh vegetables, succulent meat,
+                and aromatic spices. Whether you prefer classic flavors like Chow Mein or spicy options like Szechuan,
+                our Noodles are a satisfying and flavorful meal option.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="omelette.jfif" alt="Product 2">
+            <h2>Omelette</h2>
+            <p>Start your day right with our hearty and flavorful Omelette, made with fluffy eggs and filled with your
+                choice of savory fillings like cheese, vegetables, or meats. Served with toast or as a filling for
+                sandwiches, our Omelettes are a delicious and satisfying breakfast option.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="pakoda.jfif" alt="Product 2">
+            <h2>Pakoda</h2>
+            <p>Indulge in our crispy and flavorful Pakodas, featuring a variety of vegetables or meats coated in a
+                spiced chickpea flour batter and deep-fried to golden perfection. Perfect as a snack or appetizer, our
+                Pakodas are sure to please your palate.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="paneer.jfif" alt="Product 2">
+            <h2>Paneer</h2>
+            <p>Treat yourself to our creamy and indulgent Paneer dishes, featuring soft cubes of Indian cottage cheese
+                simmered in rich and flavorful gravies. Whether you prefer classic options like Paneer Tikka Masala or
+                innovative creations, our Paneer dishes are a delicious choice for vegetarians and paneer lovers alike.
+            </p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="paratha.jfif" alt="Product 2">
+            <h2>Paratha</h2>
+            <p> Enjoy the comforting flavors of our Parathas, flaky and buttery Indian flatbreads stuffed with a variety
+                of savory fillings like spiced potatoes, paneer, or minced meat. Served hot off the griddle with a side
+                of yogurt or pickles, our Parathas are a satisfying and delicious meal option.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="pasta.jfif" alt="Product 2">
+            <h2>Pasta</h2>
+            <p>Delight in our Pasta, cooked to al dente perfection and tossed in a rich, savory sauce of your
+                choice—whether it's creamy Alfredo, tangy marinara, or zesty pesto. Every forkful is a symphony of
+                flavors and textures.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="pizza.jpg" alt="Product 2">
+            <h2>Pizza</h2>
+            <p>Indulge in our artisanal Pizza, featuring a crispy crust topped with a tantalizing blend of gooey cheese
+                and your favorite toppings, from classic pepperoni to fresh veggies. It's a slice of heaven in every
+                bite.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="plain rice.jfif" alt="Product 2">
+            <h2>Plain Rice</h2>
+            <p>Enjoy the simplicity of our Plain Rice, fluffy and steaming hot, perfect as a side dish or as a base for
+                your favorite curry or stir-fry.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="poori bhaji.jfif" alt="Product 2">
+            <h2>Poori bhaji</h2>
+            <p>Experience the authentic flavors of India with our Poori Bhaji, featuring fluffy deep-fried bread served
+                alongside a fragrant and flavorful potato curry. It's a satisfying and hearty meal that's sure to please
+                your palate.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="prawns.jfif" alt="Product 2">
+            <h2>Prawns</h2>
+            <p>Dive into our succulent Prawns, perfectly seasoned and grilled to perfection. Each bite is bursting with
+                the fresh, briny flavor of the sea, making it a seafood lover's delight.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="pulao.jpg" alt="Product 2">
+            <h2>Pulao</h2>
+            <p>Savor the aromatic blend of spices and fluffy rice in our Pulao, a fragrant and flavorful dish that's
+                perfect as a main course or as a side dish to complement any meal.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="rolls.jfif" alt="Product 2">
+            <h2>Rolls</h2>
+            <p>Bite into our savory Rolls, filled with tender meats, fresh veggies, and zesty sauces, all wrapped in a
+                warm and fluffy flatbread. It's a handheld delight that's perfect for on-the-go snacking.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="roti.jpg" alt="Product 2">
+            <h2>Roti</h2>
+            <p>Enjoy our soft and pillowy Roti, freshly made and perfect for scooping up your favorite curries or as a
+                side to complement any meal.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="salad.jfif" alt="Product 2">
+            <h2>Salad</h2>
+            <p>Refresh your palate with our crisp and refreshing Salad, featuring a colorful medley of fresh greens,
+                crunchy vegetables, and tangy dressing. It's a healthy and satisfying option for any occasion.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="sandwich.jfif" alt="Product 2">
+            <h2>Sandwich</h2>
+            <p>Sink your teeth into our delectable Sandwich, layered with flavorful meats, cheeses, and veggies, all
+                nestled between slices of soft, toasted bread. It's a classic comfort food that never disappoints.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="soup.jfif" alt="Product 2">
+            <h2>Soup</h2>
+            <p>Warm up with our comforting Soup, made with the finest ingredients and simmered to perfection. Whether
+                you prefer creamy bisques, hearty stews, or light broths, we have a soup to suit every taste.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="wings.jfif" alt="Product 2">
+            <h2>Wings</h2>
+            <p>Get your fingers messy with our crispy and flavorful Wings, tossed in your choice of mouthwatering
+                sauces, from classic buffalo to tangy barbecue. It's the ultimate finger-licking good snack for any
+                occasion.</p>
+            <p>Price: $X.XX</p>
+            <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>Your Services</h1>
+    </header>
+
+    <section>
+        <div class="services-container">
+            <div class="service">
+                <h2><i class="fa-solid fa-cart-shopping"></i> Food Ordering</h2>
+                <p>Browse our diverse menu and easily place your order for delicious meals, snacks, and beverages from
+                    the comfort of your home or on-the-go. With just a few taps, you can explore a variety of cuisines
+                    and specialties, ensuring there's something for every craving.</p>
+            </div>
+
+            <div class="service">
+                <h2></h2><i class="fa-solid fa-location-dot"></i> Order Tracking</h2>
+                <p>Stay updated on the status of your order with our convenient order tracking feature. From preparation
+                    to delivery, you can monitor the progress of your order in real-time, ensuring timely and efficient
+                    service. Receive notifications at each stage of the process, so you're always in the know.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fa-solid fa-money-bill"></i> Payment Method</h2>
+                <p>Enjoy hassle-free payment options with our secure and convenient payment methods. Whether you prefer
+                    to pay with credit/debit cards, mobile wallets, or cash on delivery, we've got you covered. Rest
+                    assured that your transactions are safe and encrypted, providing you with peace of mind as you
+                    indulge in your favorite meals.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+</body>
+
+</html>

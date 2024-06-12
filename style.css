@@ -1,0 +1,135 @@
+
+#navbar{
+    border:2px solid red;
+    display:flex;
+    align-items: center;
+    position: relative;
+    top:0px;
+}
+#logo{
+    
+}
+#logo img{
+    border:2px solid blue;
+    margin:2px;
+    padding:2px;
+    height:50px;
+}
+.item a{
+    text-decoration: none;
+    display:block;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    color:white;
+    list-style: none;
+    font-size: 1.3rem;
+
+}
+#navbar ul li a{
+    color:white;
+    display: block;
+    padding:3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    text-decoration: underline;
+
+}
+#navbar::before{
+    content:"";
+    background-color: black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index:-1;
+    opacity: 0.4;
+}
+/* #navbar{
+    position: relative;
+} */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height:530px;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+
+}
+#home::before{
+    content:"";
+    background:url('background\ photo.jpg');
+    position:absolute;
+    height: 530px;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index:-1;
+    opacity: 0.89;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.h-primary{
+    font-size: 2.8rem;
+    padding:12px;
+    text-align: center;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-size: 3.8rem;
+    font-family: 'Caveat', cursive;
+}
+.btn{
+    padding:6px 20px;
+    border:2px solid white;
+    background-color: transparent;
+    color:white;
+    margin: 17px;
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    color:rgb(78, 30, 30);
+    background-color: white;
+}
+#services{
+    border: 2px solid blue;
+    margin:34px;
+    display: flex;
+    /* display: list-item; */
+    /* height:23px; */
+    /* width:35px; */
+
+}
+.box{
+    border: 2px solid brown;
+    margin: 3px 6px;
+    height: 45vh;
+    width: 23vw;
+    border-radius: 28px;
+    padding: 34px;
+    justify-content: center;
+    background-color: rgb(211, 206, 206);
+}
+.box img{
+    margin: 0px;
+    padding: 0px 60px;
+    height: 150px;
+    width:220px;
+    /* height:156px; */
+    display: block;
+    margin: auto;
+}
+
